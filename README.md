@@ -72,7 +72,9 @@ Non-active users are saved to `non_active_users.json` with fields:
 
 Run unit tests:
 
-
+```bash
+python3 -m unittest discover -s tests -p \"test_*.py\"
+```
 
 ## Disclaimer
 
