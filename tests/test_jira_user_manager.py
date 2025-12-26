@@ -19,7 +19,7 @@ class TestJiraUserManager(unittest.TestCase):
         os.environ['JIRA_EMAIL'] = 'user@example.com'
         os.environ['JIRA_API_TOKEN'] = 'token123'
         # Confirm use of stored email and token
-        mock_input.side_effect = ["y", "y"]
+        mock_input.side_effect = ["y", "y", ""]
         mgr = JiraUserManager()
         mgr.setup_credentials()
         self.assertEqual(mgr.email, 'user@example.com')

@@ -74,7 +74,6 @@ Run unit tests:
 
 
 
-
 ## Disclaimer
 
 This script was tested against Atlassian Jira Cloud REST API v3 as of 2025-12-26.
