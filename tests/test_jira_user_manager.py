@@ -15,7 +15,8 @@ class TestJiraUserManager(unittest.TestCase):
     @patch('jira_user_manager.getpass.getpass', return_value='token123')
     @patch('builtins.input')
     def test_setup_credentials_uses_inputs(self, mock_input, mock_getpass):
-        mock_input.side_effect = ["user@example.com"]
+        # sequence: possibly prompt to use stored email? then email; possibly token prompt? then token confirm
+        mock_input.side_effect = ["user@example.com", "y"]
         mgr = JiraUserManager()
         mgr.setup_credentials()
         self.assertEqual(mgr.email, 'user@example.com')
