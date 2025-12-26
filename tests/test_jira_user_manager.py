@@ -8,6 +8,7 @@ from jira_user_manager import JiraUserManager
 class TestJiraUserManager(unittest.TestCase):
     def setUp(self):
         os.environ['JIRA_DOMAIN'] = 'example'
+        os.environ['DOTENV_DISABLE'] = '1'  # prevent loading .env during tests
         os.environ.pop('JIRA_EMAIL', None)
         os.environ.pop('JIRA_API_TOKEN', None)
 
