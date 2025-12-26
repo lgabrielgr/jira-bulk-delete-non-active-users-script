@@ -67,3 +67,14 @@ Non-active users are saved to `non_active_users.json` with fields:
 - active status
 - accountType
 - and other user metadata
+
+## Testing
+
+Run unit tests:
+
+
+
+
+## Disclaimer
+
+This script was tested against Atlassian Jira Cloud REST API v3 as of 2025-12-26.
